@@ -17,29 +17,29 @@ class Skicams extends Component {
   componentDidMount() {
     getVideo().then(res => {
       this.setState({
-        skiCamera: this.getCamerasFromSpecyficCurorts(res.data)
+        skiCamera: this.getCamerasFromSpecificCurorts(res.data)
       });
     }).catch(error => {
       console.log(error)
     });
   }
 
-  getCamerasFromSpecyficCurorts = data => {
-    const specyficSkiCurorts = [
+  getCamerasFromSpecificCurorts = data => {
+    const specificSkiCurorts = [
       `Presolana - Monte Pora`,
       `Alpe Devero`
     ];
 
-    const specyficCameras = [
+    const specificCameras = [
       `Vista sulla piana e sulle piste da sci`,
       `Rifugio Castiglioni ( 1640 mt.) che domina nell'estremo Nord della piana l'Alpe Devero`,
       `Cima Pora`,
       `Pian del Termen, PoraPark`
     ];
 
-    const skiCurorts = Object.values(data).filter(el => specyficSkiCurorts.includes(el.name));
+    const skiCurorts = Object.values(data).filter(el => specificSkiCurorts.includes(el.name));
     return skiCurorts.map(elem => {
-      elem.cams = Object.values(elem.cams).filter(elem => specyficCameras.includes(elem.name));
+      elem.cams = Object.values(elem.cams).filter(elem => specificCameras.includes(elem.name));
       return elem;
     });
   };
@@ -50,6 +50,7 @@ class Skicams extends Component {
           key={index}
           video={elem.cams[0].url}
           videoTwo={elem.cams[1].url}
+          time={this.state.currentDate}
         >
           {elem.name}
         </SkicamElementView>
@@ -57,9 +58,8 @@ class Skicams extends Component {
 
     return (
       <div className={'ski-wrapper'}>
-        <SkicamGridView skiCurortList={this.state.skiObject}>
+        <SkicamGridView skiCurortList={this.state.skiObject} >
           {skiCurort}
-          <p>Date: {this.state.currentDate}</p>
         </SkicamGridView>
       </div>
     )

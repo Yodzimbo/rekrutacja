@@ -281,13 +281,25 @@ body {
   width: 100%;
 }
 
+.ski-view-sec {
+  margin-top: -4px;
+}
+
 .skicam-title {
-  color: #b3b3b3;
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
   color: #545454;
   margin: 20px 0;
   margin-top: 20px;
+}
+
+.time-date {
+  float: right;
+  margin-top: -60px;
+  margin-right: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #545454;
 }
 
 @media only screen and (max-width: 1248px) {
