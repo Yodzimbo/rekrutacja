@@ -48,8 +48,8 @@ class Skicams extends Component {
     const skiCurort = this.state.skiCamera.map((elem, index) => (
       <SkicamElementView
           key={index}
-          video={elem.cams[0].url}
-          videoTwo={elem.cams[1].url}
+          firstCam={elem.cams[0].url}
+          secondCam={elem.cams[1].url}
           time={this.state.currentDate}
         >
           {elem.name}
