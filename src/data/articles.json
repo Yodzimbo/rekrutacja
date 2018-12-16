@@ -1,0 +1,22 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "title": "Lorem ispum",
+            "description": "Lorem ipsum dolor sit amet, id mei atqui accusata iracundia, ne vel utroque facilisis. Ius recusabo signiferumque in, noluisse concludaturque ex pro, per an accumsan.",
+            "image": "first.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Lorem ispum",
+            "description": "Lorem ipsum dolor sit amet, id mei atqui accusata iracundia, ne vel utroque facilisis. Ius recusabo signiferumque in, noluisse concludaturque ex pro, per an accumsan.",
+            "image": "second.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Lorem ispum",
+            "description": "Lorem ipsum dolor sit amet, id mei atqui accusata iracundia, ne vel utroque facilisis. Ius recusabo signiferumque in, noluisse concludaturque ex pro, per an accumsan.",
+            "image": "third.jpg"
+        }
+    ]
+}
